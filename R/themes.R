@@ -1,0 +1,31 @@
+
+
+theme_presentation <- function() {
+  theme_minimal(base_size = 28, base_family = "Segoe Script") %+replace%
+    theme(plot.title = element_text(hjust = 0.5, size = 34),
+          plot.background = element_rect(fill = "cornsilk2", color = NA),
+          panel.background = element_rect(fill = "cornsilk", color = NA),
+          axis.title.x = element_text(size = 32),
+          axis.title.y = element_text(size = 32, angle = 90, margin = margin(t = 0, r = 10, b = 0, l = 0)),
+          axis.text.x = element_text(family = "Perpetua"),
+          axis.text.y = element_text(family = "Perpetua"),
+          legend.title = element_text(size = 29, family ="Perpetua"),
+          legend.background = element_rect(fill ="cornsilk", size = 0.75, color = "lavender"),
+          legend.text = element_text(family = "Perpetua"),
+          legend.margin = margin(c(0.4, 0.4, 0.4, 0.4), unit = "cm")
+    )
+}
+
+## ## ##
+
+theme_publishing <- function() {
+  theme_light(base_size = 20, base_family = "Perpetua") %+replace%
+    theme(plot.title = element_text(hjust = 0.5, size = 25, margin = margin(t = 0, r = 0, b = 9, l = 0)),
+          axis.title.y = element_text(size = 22, angle = 90, margin = margin(t = 0, r = 10, b = 0, l = 0)),
+          axis.title.x = element_text(size = 22),
+          legend.title = element_text(size = 20, family ="Perpetua"),
+          legend.background = element_rect(fill ="lavender", size = 0.75, color = "lavender"),
+          legend.text = element_text(family = "Perpetua", size = 17),
+          legend.margin = margin(c(0.4, 0.4, 0.4, 0.4), unit = "cm")
+    )
+}
