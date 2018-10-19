@@ -10,3 +10,14 @@ fish %>%
                                 length < 300 ~ "small")) -> fish
 head(fish)
 
+# Challenge
+# histogram of scale length
+# fill by length_cat
+# facet wrap ~ length_cat w/chosen theme
+# upload to github and share with chizinski
+
+ggplot() +
+  geom_histogram(data = fish, aes(x = scalelength, fill = length_cat)) +
+  labs(title = "Fish Histogram") +
+  facet_wrap(~ length_cat, nrow = 1) +
+  theme_presentation() -> FishHistogram
